@@ -36,6 +36,12 @@
           <label><strong>Authors:</strong></label> {{ currentBook.authors }}
         </div>
         <div>
+          <b-form-rating v-model="currentBook.rating" readonly></b-form-rating>
+          <p>
+            Rating: {{ currentBook.rating }}
+          </p>
+        </div>
+        <div>
             <img v-bind:src="currentBook.thumbnail" class="img-thumbnail" alt="..."/>
         </div>
         <button class="btn btn-warning" type="button" @click="addToFav"> Add To Favorite </button>
@@ -56,7 +62,7 @@ export default {
       books: [],
       currentBook: null,
       currentIndex: -1,
-      keyword: ""
+      keyword: "",
     };
   },
   methods: {

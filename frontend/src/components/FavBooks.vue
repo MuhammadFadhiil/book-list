@@ -22,7 +22,7 @@
 <script>
 import BookService from '../service/BookService'
 export default {
-  name: "books-favorite",
+  name: "books-fav",
   data() {
     return {
       books: [],
