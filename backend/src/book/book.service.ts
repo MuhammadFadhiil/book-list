@@ -42,7 +42,9 @@ export class BookService {
         const obj = {
           title: e.volumeInfo.title,
           authors: parseAuthor,
-          thumbnail: image.thumbnail ? image.thumbnail : '-',
+          thumbnail: image.thumbnail
+            ? image.thumbnail
+            : 'https://pammana.wajokab.go.id/img/no-image.png',
         };
         resArr.push(obj);
       });
