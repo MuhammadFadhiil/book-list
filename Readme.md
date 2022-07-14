@@ -1,7 +1,10 @@
 # Search Book
 
-## Run Locally
+## Demo
 
+https://user-images.githubusercontent.com/14941568/178940940-d02d2679-5f3b-4d8f-b845-3686da2b0578.mp4
+
+## Run Locally
 ### Clone the project
 
 ```bash
@@ -25,6 +28,7 @@ Go to the project directory
 ```bash
   cd backend
   npm i
+  source .env
   npm run start:dev
 ```
 
