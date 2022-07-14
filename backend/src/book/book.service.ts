@@ -30,6 +30,9 @@ export class BookService {
         const image = e.volumeInfo.imageLinks
           ? e.volumeInfo.imageLinks
           : 'image not found';
+        const rating = e.volumeInfo.averageRating
+          ? e.volumeInfo.averageRating
+          : 3;
         const authors = e.volumeInfo.authors;
         let parseAuthor = '';
         if (authors.length > 1) {
@@ -45,6 +48,7 @@ export class BookService {
           thumbnail: image.thumbnail
             ? image.thumbnail
             : 'https://pammana.wajokab.go.id/img/no-image.png',
+          rating: rating,
         };
         resArr.push(obj);
       });
